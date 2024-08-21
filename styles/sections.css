@@ -3,6 +3,26 @@
     img{
         height: 100%;
         object-fit: cover;
+    }
+    
+    .card {
         border-radius: 4px;
+        /* O overflow cuida do transbordamentos, hidden faz com o que o conteudo que 
+        ultrapasse o tamanho/transborde para fora da caixa fique escondido */
+        overflow: hidden;
+        position: relative;
+        /* O & faz com que a estilização começe a parti do .card */
+        &::before {
+            /* content que serve para adicionar conteudo ao elemento atraves do css */
+            content: "";
+            position: absolute;
+            inset: 0;
+            top: 50%;
+            background: linear-gradient(
+                180deg,
+                transparent 0%,
+                #020617 100%
+            );
+        }
     }
 }
