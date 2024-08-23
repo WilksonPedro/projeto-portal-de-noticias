@@ -24,5 +24,10 @@
                 #020617 100%
             );
         }
+
+        figcaption {
+            position: absolute;
+            bottom: 0;
+        }
     }
 }
