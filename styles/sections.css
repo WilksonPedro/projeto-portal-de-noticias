@@ -28,6 +28,18 @@
         figcaption {
             position: absolute;
             bottom: 0;
+            padding: 24px;
+            /* &:has: se o figcaption tiver um elemento com a classe 'text-lg' como descendente direto ele aplica
+            o estilo abaixo.
+            */
+            &:has(.text-lg) {
+                padding: 12px;
+            }
+
+            h2 {
+                margin-top: 8px;
+            }
         }
     }
 }
+
